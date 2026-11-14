@@ -45,3 +45,9 @@ Open <http://127.0.0.1:4173/>. Rerun the build after editing content. No depende
 3. In **Actions**, run **Deploy catalogue to GitHub Pages**. Open the URL in the deployment job once it succeeds. Future pushes to `main` trigger the workflow automatically.
 
 The workflow builds into `dist/` and publishes that directory. GitHub's [Pages publishing source guide](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) covers the one-time setup.
+
+## Fishbowl prototype
+
+Fishbowl appears in the catalogue at `/products/fishbowl/`. Its Discover, Filter Collection, and Studio views share persistent browser-local state (`fishbowl-v1`). The collection supports simulated subscriptions, enable/pause, unsubscribe, priority ordering, immersion, and encounter conflict inspection. Studio saves editable publisher identity, intent, visual/audio/behavior rules, conditions, local versions, and draft restoration. Publishing is simulated; pricing is TBD.
+
+Run `npm run build` followed by `npm run preview`, then visit <http://127.0.0.1:4173/products/fishbowl/>. No dependencies are required. The supplied street images are illustrative variants; the Original view is a desaturated stand-in, and immersion blends the highest-priority visual variant. Audio settings describe simulated responses and do not synthesize sound. Published versions stay in the local release history and do not create real marketplace listings.
